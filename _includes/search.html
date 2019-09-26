@@ -1,0 +1,13 @@
+<div id="search">
+  <div>
+    <input type="text" id="search-input" placeholder="Search" aria-label="Search the site">
+    <ul id="results-container"></ul>
+    <script>
+      var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ site.url }}/search.json'
+    })
+    </script>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    {% include navigation.html %}
+    <main id="main_content">
+      {{ page.content | markdownify }}
+    </main>
+    {% include footer.html %}
+    {% include analytics.html %}
+  </body>
+</html>

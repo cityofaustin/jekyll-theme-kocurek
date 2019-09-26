@@ -1,0 +1,57 @@
+html {
+  font-family: $base-font;
+  font-size: 18px;
+}
+
+a {
+  color: #689671;
+}
+
+p, ul, ol {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: .1em;
+}
+
+li {
+  list-style-position: outside;
+}
+
+ol, ul {
+  margin-left: 1.25em;
+}
+
+ul {
+  li {
+    list-style: circle;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $header-font;
+  padding: .1em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1em;
+  a, span {
+    font-size: .7em;
+  }
+  a {
+    background-color: #f2f2f2;
+    display: inline-block;
+    margin-right: .1em;
+    padding: .2em;
+    text-align: center;
+    width: 2em;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+}

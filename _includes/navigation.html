@@ -1,0 +1,32 @@
+<nav>
+  <ul>
+    {%- assign sections = site.collections | sort: 'section_order' -%}
+    {%- for collection in sections -%}
+      {%- if collection.label != 'posts' -%}
+        {%- if page.collection == collection.label -%}
+          <li class="current">
+        {%- else -%}
+          <li>
+        {%- endif -%}
+          <a href="{{site.url}}/{{collection.label}}" class="current" name="{{collection.label}}"><span>{{ collection.section_order }}</span> <span>{{ collection.name }}</span></a>
+          {%- if page.collection == collection.label -%}
+            {%- assign docs = collection.docs | sort: 'order' -%}
+            {%- if docs.size > 1 -%}
+              <ul>
+                {% for item in docs offset:1 %}
+                  {% if page == item %}
+                    <li class="current">
+                  {% else %}
+                    <li>
+                  {% endif %}
+                  {{ item.title }}
+                  </li>
+                {% endfor %}
+              </ul>
+            {%- endif -%}
+          {%- endif -%}
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</nav>
