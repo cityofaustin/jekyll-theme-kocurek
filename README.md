@@ -2,9 +2,13 @@
 
 Kocurek is a Jekyll theme for static sites published on GitHub Pages. It was developed for the Austin Convention Center Department for use on documentation sites.
 
+## Example
+
+The [Kocurek Jekyll Theme Example](https://github.com/mattlangan/jekyll-theme-kocurek-example) repository is a template that you can use to quickly create your own Github Pages site in minutes, _without the need for a developer_.
+
 ## How it Works
 
-Kocurek is installed as a gem in a Jekyll project. The theme includes default styling and layouts for a site's homepage, content pages, and navigation.
+Kocurek is added as a `remote_theme` in your Jekyll project. The theme includes default styling and layouts for a site's homepage, content pages, and navigation.
 
 Content is edited directly in markdown files in the `collections/` subdirectories.
 
@@ -26,3 +30,11 @@ The following live sites are using Kocurek:
   [https://ops.palmereventscenter.com](Website) | [](GitHub)
 - Austin Convention Center Web Publishing Guides
   [](Website) | [](GitHub)
+
+---
+
+## Options
+
+### Search
+
+The theme includes support for site search via the [Jekyll Simple Site Search](https://github.com/christian-fei/Simple-Jekyll-Search) JavaScript library.
