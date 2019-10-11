@@ -21,9 +21,11 @@
         {%- endif -%}
         <hr />
       {% endfor %}
+      {%- if site.printable -%}
       <div class="print-page">
         <a href="javascript:if(window.print)window.print()" class="print-page-link">Print</a>
       </div>
+      {%- endif -%}
     </main>
     {% include footer.html %}
     {% include analytics.html %}
