@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title>{{ site.title }}</title>
+    <meta name="robots" content="noindex">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" href="https://use.typekit.net/xtb6utt.css">
+    <link rel="stylesheet" type="text/css" media="all" href="{{ '/assets/css/print.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <main id="main_content" class="pdf-content">
+      <h1 style="text-align: center;">{{ site.title }}</h1>
+
+      <!-- Index page content -->
+      {%- assign homepage = site.pages | where:'title', 'Homepage' | first -%}
+      {{ homepage.content | markdownify }}
+
+      <!-- Content Sections -->
+      {%- assign sections = site.collections | sort: 'section_order' -%}
+      {%- for collection in sections -%}
+        {%- if collection.label != 'posts' -%}
+          <section>
+            {% assign items = collection.docs | sort: "order" %}
+            {% for item in items %}
+              {%- if item == items.first -%}
+                <h1>
+                  <span>{{ collection.section_order }}</span>
+                  {{ item.title }}
+                </h1>
+              {%- else -%}
+                <h2>
+                  <span>{{ collection.section_order}}.{{forloop.index | minus: 1}}</span>
+                  {{ item.title }}
+                </h2>
+              {%- endif -%}
+              {{ item.content | markdownify }}
+            {% endfor %}
+          </section>
+        {%- endif -%}
+      {%- endfor -%}
+      <section>
+        <a href="{{site.url}}">{{site.url}}</a>
+      </section>
+    </main>
+  </body>
+</html>
