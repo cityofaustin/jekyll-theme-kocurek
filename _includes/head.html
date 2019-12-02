@@ -7,4 +7,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/xtb6utt.css">
   <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   <link rel="stylesheet" type="text/css" media="print" href="{{ '/assets/css/print.css?v=' | append: site.github.build_revision | relative_url }}">
+  {%- if site.hidden_from_search -%}
+  <meta name="robots" content="noindex">
+  {%- endif -%}
 </head>
