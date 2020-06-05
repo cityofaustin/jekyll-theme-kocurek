@@ -1,5 +1,32 @@
+<a href="#main_content" id="skip_nav_link">Skip to content</a>
 <nav>
-  <ul>
+  <div>
+    {%- if site.logo -%}
+      <a href="{{site.url}}" class="header-link">
+        <img src="{{ site.url }}/assets/images/{{site.logo}}" alt="Return to homepage" />
+      </a>
+    {%- else -%}
+      <a href="{{site.url}}" class="header-link">
+        {{ site.title }}
+      </a>
+    {%- endif -%}
+    {%- if site.searchable -%}
+      <div id="ops_search">
+        <div>
+          <input type="text" id="search-input" placeholder="Search this site" aria-label="Search the site">
+          <ul id="results-container"></ul>
+          <script>
+            var sjs = SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.url }}/search.json'
+          })
+          </script>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+  <ul class="nav-list">
     {%- assign sections = site.collections | sort: 'section_order' -%}
     {%- for collection in sections -%}
       {%- if collection.label != 'posts' -%}

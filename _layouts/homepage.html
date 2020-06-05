@@ -2,13 +2,15 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
   <body>
-    {% include header.html %}
+    {% include random_background.html %}
     {% include navigation.html %}
     <main id="main_content">
-      {%- if site.banner_image -%}
-        <img src="{{ site.url }}/assets/images/{{ site.banner_image }}" class="homepage-banner-image" aria-hidden=true />
-      {%- endif -%}
-      {{ page.content | markdownify }}
+      <div>
+        {%- if site.banner_image -%}
+          <img src="{{ site.url }}/assets/images/{{ site.banner_image }}" class="homepage-banner-image" aria-hidden=true />
+        {%- endif -%}
+        {{ page.content | markdownify }}
+      </div>
     </main>
     {% include footer.html %}
     {% include analytics.html %}

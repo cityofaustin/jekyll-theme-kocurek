@@ -2,29 +2,31 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
   <body>
-    {% include header.html %}
+    {% include random_background.html %}
     {% include navigation.html %}
     <main id="main_content">
-      {% assign this_collection = site.collections | where:"label", page.collection | first %}
+      <div>
+        {% assign this_collection = site.collections | where:"label", page.collection | first %}
 
-      {% assign items = this_collection.docs | sort: "order" %}
-      {% for item in items %}
-        {%- if item == items.first -%}
-          <h1>{{ item.title }}</h1>
-          {{ item.content | markdownify }}
-        {%- else -%}
-          <h2>
-            <a href="{{site.url}}{{item.url}}">{{ this_collection.section_order}}.{{forloop.index | minus: 1}}</a>
-            {{ item.title }}
-          </h2>
-          {{ item.content | markdownify }}
-        {%- endif -%}
-        <hr />
-      {% endfor %}
-      {%- if site.printable -%}
-      <div class="print-page">
-        <a href="javascript:if(window.print)window.print()" class="print-page-link">Print</a>
+        {% assign items = this_collection.docs | sort: "order" %}
+        {% for item in items %}
+          {%- if item == items.first -%}
+            <h1>{{ item.title }}</h1>
+            {{ item.content | markdownify }}
+          {%- else -%}
+            <h2>
+              <a href="{{site.url}}{{item.url}}">{{ this_collection.section_order}}.{{forloop.index | minus: 1}}</a>
+              {{ item.title }}
+            </h2>
+            {{ item.content | markdownify }}
+          {%- endif -%}
+          <hr />
+        {% endfor %}
       </div>
+      {%- if site.printable -%}
+        <div class="print-page">
+          <a href="javascript:if(window.print)window.print()" class="print-page-link">Print</a>
+        </div>
       {%- endif -%}
     </main>
     {% include footer.html %}
