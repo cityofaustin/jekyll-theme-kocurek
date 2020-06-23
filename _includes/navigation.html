@@ -1,14 +1,17 @@
 <a href="#main_content" id="skip_nav_link">Skip to content</a>
 <nav>
   <div>
+    {%- if site.parent_site -%}
+      <a href="{{site.parent_site.url}}" class="parent-site">
+        <img src="{{ site.url }}/assets/images/{{ site.parent_site.logo }}" alt="{{ site.parent_site.title }}" />
+      </a>
+    {%- endif -%}
     {%- if site.logo -%}
       <a href="{{site.url}}" class="header-link">
-        <img src="{{ site.url }}/assets/images/{{site.logo}}" alt="Return to homepage" />
+        <img src="{{ site.url }}/assets/images/{{ site.logo }}" alt="Site Home" />
       </a>
     {%- else -%}
-      <a href="{{site.url}}" class="header-link">
-        {{ site.title }}
-      </a>
+      <a href="{{site.url}}" class="header-link">Site Home</a>
     {%- endif -%}
     {%- if site.searchable -%}
       <div id="ops_search">

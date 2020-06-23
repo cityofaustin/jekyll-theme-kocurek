@@ -95,6 +95,14 @@ nav {
   > ul > li {
     border-bottom: 1px solid gray;
   }
+
+  .parent-site {
+    display: block;
+    margin-top: 1em;
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 main {
