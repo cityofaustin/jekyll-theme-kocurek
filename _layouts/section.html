@@ -16,7 +16,7 @@
             {{ item.content | markdownify }}
           {%- else -%}
             <h2>
-              <a href="{{site.url}}{{item.url}}">{{ this_collection.section_order}}.{{forloop.index | minus: 1}}</a>
+              {{ this_collection.section_order}}.{{forloop.index | minus: 1}} 
               {{ item.title }}
             </h2>
             {{ item.content | markdownify }}

@@ -78,14 +78,17 @@ nav {
       ul {
         font-size: .8em;
         margin-left: 20%;
+        padding-top: .5em;
         li {
-          padding-left: 0;
+          padding-left: .5em;
           &.current {
             background-color: rgba(#F2F2F2, .9);
             border-color: transparent;
             color: black;
             font-weight: bold;
-            padding-left: 1em;
+          }
+          a {
+            text-decoration: underline;
           }
         }
       }

@@ -49,7 +49,7 @@
                   {% else %}
                     <li>
                   {% endif %}
-                  {{ item.title }}
+                    <a href="{{item.url}}">{{collection.section_order}}.{{ item.order | minus: 1 }} {{ item.title }}</a>
                   </li>
                 {% endfor %}
               </ul>
