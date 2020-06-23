@@ -108,6 +108,10 @@ nav {
 main {
   width: 67%;
   z-index: 2;
+  p, ul, ol {
+    margin-bottom:.5em;
+    margin-top: .5em;
+  }
 }
 
 footer {
