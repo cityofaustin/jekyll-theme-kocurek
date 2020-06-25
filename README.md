@@ -25,11 +25,11 @@ Content is edited directly in markdown files in the `collections/` subdirectorie
 The following live sites are using Kocurek:
 
 - Austin Convention Center Operations Manual
-  [https://ops.austinconventioncenter.com](Website) | [](GitHub)
+  [https://ops.austinconventioncenter.com](https://ops.austinconventioncenter.com)
 - Palmer Events Center Operations Manual
-  [https://ops.palmereventscenter.com](Website) | [](GitHub)
+  [https://ops.palmereventscenter.com](https://ops.palmereventscenter.com)
 - Austin Convention Center Web Publishing Guides
-  [](Website) | [](GitHub)
+  [https://webguides.austinconventioncenter.com](https://webguides.austinconventioncenter.com)
 
 ---
 
