@@ -6,12 +6,7 @@
     {% include navigation.html %}
     <main id="main_content">
       <div>
-        {%- if site.printable -%}
-          <p class="print-page">
-            <a href="javascript:if(window.print)window.print()" class="print-page-link">Print This Page</a>
-          </p>
-        {%- endif -%}
-
+        {% include print.html %}
         {% assign this_collection = site.collections | where:"label", page.collection | first %}
 
         {% assign items = this_collection.docs | sort: "order" %}
