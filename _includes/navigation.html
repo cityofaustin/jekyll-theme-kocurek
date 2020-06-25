@@ -1,5 +1,35 @@
+<a href="#main_content" id="skip_nav_link">Skip to content</a>
 <nav>
-  <ul>
+  <div>
+    {%- if site.parent_site -%}
+      <a href="{{site.parent_site.url}}" class="parent-site">
+        <img src="{{ site.url }}/assets/images/{{ site.parent_site.logo }}" alt="{{ site.parent_site.title }}" />
+      </a>
+    {%- endif -%}
+    {%- if site.logo -%}
+      <a href="{{site.url}}" class="header-link">
+        <img src="{{ site.url }}/assets/images/{{ site.logo }}" alt="Site Home" />
+      </a>
+    {%- else -%}
+      <a href="{{site.url}}" class="header-link">Site Home</a>
+    {%- endif -%}
+    {%- if site.searchable -%}
+      <div id="ops_search">
+        <div>
+          <input type="text" id="search-input" placeholder="Search this site" aria-label="Search the site">
+          <ul id="results-container"></ul>
+          <script>
+            var sjs = SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.url }}/search.json'
+          })
+          </script>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+  <ul class="nav-list">
     {%- assign sections = site.collections | sort: 'section_order' -%}
     {%- for collection in sections -%}
       {%- if collection.label != 'posts' -%}
@@ -19,7 +49,7 @@
                   {% else %}
                     <li>
                   {% endif %}
-                  {{ item.title }}
+                    <a href="{{item.url}}">{{collection.section_order}}.{{ item.order | minus: 1 }} {{ item.title }}</a>
                   </li>
                 {% endfor %}
               </ul>

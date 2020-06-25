@@ -1,0 +1,9 @@
+{%- if site.random_background_images > 0 -%}
+<script type="text/javascript">
+  $(document).ready(function() {
+    n = Math.floor(Math.random() * parseInt({{ site.random_background_images }})) + 1;
+    $bgImage = "url('{{ site.baseurl }}/assets/images/backgrounds/" + n + ".jpg')";
+    $('html').css("background-image", $bgImage);
+  });
+</script>
+{%- endif -%}
