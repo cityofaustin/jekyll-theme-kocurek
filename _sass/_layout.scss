@@ -32,6 +32,15 @@ main {
    }
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+table {
+  width: 100%;
+}
+
 nav {
   background-color: rgba(black, .8);
   color: white;
