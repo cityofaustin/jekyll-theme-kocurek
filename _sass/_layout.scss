@@ -151,6 +151,17 @@ footer {
   max-width: 100%;
   > div {
     position: relative;
+    img.clear-search-button {
+      background-color: black;
+      border-radius: 50%;
+      display: block;
+      height: 100%;
+      padding: .25em;
+      position: absolute;
+      right: 5px;
+      top: 0;
+      width: auto;
+    }
   }
   input {
     background-color: white;
