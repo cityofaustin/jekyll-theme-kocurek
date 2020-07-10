@@ -1,5 +1,14 @@
 <a href="#main_content" id="skip_nav_link">Skip to content</a>
-<nav>
+<div id="menu_toggle_container">
+  <button class="hamburger" type="button" aria-label="Toggle the menu" aria-controls="navigation">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="hamburger-label">Menu</span>
+  </button>
+</div>
+
+<nav role="navigation">
   <div>
     {%- if site.parent_site -%}
       <a href="{{site.parent_site.url}}" class="parent-site">
