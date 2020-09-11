@@ -1,5 +1,14 @@
 <a href="#main_content" id="skip_nav_link">Skip to content</a>
-<nav>
+<div id="menu_toggle_container">
+  <button class="hamburger" type="button" aria-label="Toggle the menu" aria-controls="navigation">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="hamburger-label">Menu</span>
+  </button>
+</div>
+
+<nav role="navigation">
   <div>
     {%- if site.parent_site -%}
       <a href="{{site.parent_site.url}}" class="parent-site">
@@ -16,7 +25,8 @@
     {%- if site.searchable -%}
       <div id="ops_search">
         <div>
-          <input type="text" id="search-input" placeholder="Search this site" aria-label="Search the site">
+          <input type="text" id="search-input" placeholder="Search this site" aria-label="Enter a search term to generate realtime search results in the list below.">
+          <img class="clear-search-button" src="{{ site.url }}/assets/images/button-close.png" aria-label="Click to clear search query and results" />
           <ul id="results-container"></ul>
           <script>
             var sjs = SimpleJekyllSearch({
