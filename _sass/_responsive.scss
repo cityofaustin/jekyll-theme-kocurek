@@ -51,4 +51,18 @@
   #menu_toggle_container {
     display: none;
   }
+  dl {
+    flex-direction: row;
+    dt {
+      width: 40%;
+    }
+    dd {
+      width: 60%;
+    }
+  }
+}
+
+img {
+  display: inline-block;
+  width: 45%;
 }
