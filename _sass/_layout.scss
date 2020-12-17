@@ -222,3 +222,21 @@ footer {
   margin-top: 0;
   margin-bottom: 1em;
 }
+
+dl {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  dt {
+    width: 100%;
+    padding: .5em;
+  }
+  dd {
+    width: 100%;
+    padding: .5em;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
