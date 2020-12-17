@@ -229,14 +229,15 @@ dl {
   flex-direction: column;
   flex-wrap: wrap;
   dt {
+    font-weight: bold;
     width: 100%;
-    padding: .5em;
+    padding-right: .5em;
   }
   dd {
     width: 100%;
-    padding: .5em;
     p {
       margin-bottom: 0;
+      margin-top: 0;
     }
   }
 }
