@@ -5,11 +5,11 @@
     {% include random_background.html %}
     {% include navigation.html %}
     <main id="main_content">
-
+              <!-- begin image-->
+              <img src="../assets/images/backgrounds/1.jpg" class="homepage-banner-image" aria-hidden=true />
+              <!-- end image -->
+      
       <div>
-        <!-- begin image-->
-        <img src="images/backgrounds/1.jpg" class="homepage-banner-image" aria-hidden=true />
-        <!-- end image -->
         {{ page.content | markdownify }}
       </div>
     </main>
