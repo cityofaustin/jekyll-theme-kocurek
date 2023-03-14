@@ -1,9 +1,9 @@
 $site-max-width: 1200px;
 html {
-  background-attachment: fixed;
-  background-color: black;
-  background-position: center center;
-  background-size: cover;
+  // background-attachment: fixed;
+  // background-color: black;
+  // background-position: center center;
+  // background-size: cover;
   min-height: 100%;
 }
 body {
@@ -22,7 +22,7 @@ main {
   padding: 1em 1em 5em 1em;
   z-index: 2;
    > div {
-     background-color: rgba(white, .9);
+    //  background-color: rgba(white, .9);
      margin-bottom: 3em;
      padding: 2em;
    }
@@ -38,8 +38,8 @@ table {
 }
 
 nav {
-  background-color: rgba(black, .8);
-  color: white;
+  // background-color: rgba(black, .8);
+  // color: white;
   width: 33%;
   min-height: 100%;
   padding: .5em;
@@ -50,7 +50,7 @@ nav {
       list-style: none;
       padding: .2em .2em;
       a {
-        color: white;
+        // color: white;
         display: flex;
         flex-direction: row;
         justify-content: start;

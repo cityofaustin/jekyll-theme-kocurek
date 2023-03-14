@@ -6,8 +6,8 @@
     width: 100%;
   }
   nav {
-    background-color: rgba(black, .8);
-    color: white;
+    // background-color: rgba(black, .8);
+    // color: white;
     width: 100%;
     min-height: auto;
     padding: .5em;
@@ -23,7 +23,7 @@
       top: 60px;
       left: 0;
       width: 100%;
-      background-color: black;
+      // background-color: black;
       &.expanded {
         display: block;
       }
@@ -33,14 +33,14 @@
   #menu_toggle_container {
     display: block;
     width: 100%;
-    background: rgba(black, .8);
+    // background: rgba(black, .8);
     border-bottom: 1px solid black;
-    color: white;
+    // color: white;
 
     .hamburger-inner {
-      background-color: white;
+      // background-color: white;
       &::before, &::after {
-        background-color: white;
+        // background-color: white;
       }
     }
   }
