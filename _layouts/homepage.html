@@ -2,13 +2,9 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
   <body>
-    {% include random_background.html %}
     {% include navigation.html %}
-    <main id="main_content">
+    <main id="main_content">      
       <div>
-        {%- if site.banner_image -%}
-          <img src="{{ site.url }}/assets/images/{{ site.banner_image }}" class="homepage-banner-image" aria-hidden=true />
-        {%- endif -%}
         {{ page.content | markdownify }}
       </div>
     </main>
