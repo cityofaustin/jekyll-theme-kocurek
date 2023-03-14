@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  @include linear-gradient(#1B75B6, #4991c5)
+  @include linear-gradient(#1B75B6, #4991c5);
   color: white;
   text-align: center;
   font-size: 2rem;
