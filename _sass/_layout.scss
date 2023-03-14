@@ -59,8 +59,8 @@ nav {
           display: inline-block;
         }
         span:first-child {
-          background-color: black;
-          color: #F2F2F2;
+          background-color: #1B75B6;
+          color: #FFF;
           font-family: $header-font;
           height: 1.6em;
           margin-right: .25em;
@@ -74,7 +74,7 @@ nav {
       span {
       }
       &.current {
-        background-color: rgba(#F2F2F2, .9);
+        background-color: #000;
         border-color: black;
         color: black;
         a {
