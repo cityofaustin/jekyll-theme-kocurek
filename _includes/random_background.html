@@ -3,7 +3,7 @@
   $(document).ready(function() {
     n = Math.floor(Math.random() * parseInt({{ site.random_background_images }})) + 1;
     $bgImage = "url('{{ site.baseurl }}/assets/images/backgrounds/" + n + ".jpg')";
-    $('html').css("background-image", $bgImage);
+    $('.homepage-banner-image').attr("src", $bgImage);
   });
 </script>
 {%- endif -%}

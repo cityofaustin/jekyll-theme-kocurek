@@ -6,9 +6,7 @@
     {% include navigation.html %}
     <main id="main_content">
       <div>
-        {%- if site.banner_image -%}
-          <img src="{{ site.url }}/assets/images/{{ site.banner_image }}" class="homepage-banner-image" aria-hidden=true />
-        {%- endif -%}
+        <img src="" class="homepage-banner-image" aria-hidden=true />
         {{ page.content | markdownify }}
       </div>
     </main>
