@@ -74,11 +74,14 @@ nav {
       span {
       }
       &.current {
-        background-color: #000;
+        background-color: #FFF;
         border-color: black;
         color: black;
         a {
           color: black;
+          span:first-child {
+            background-color: black;
+          }
         }
       }
       ul {
